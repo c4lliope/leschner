@@ -10,16 +10,16 @@
   .section
     .company-introduction
      .row
-      .col-xs-8
+      .col-xs-12.col-sm-8.
         h2 About the luthier
         
         p Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Maecenas egestas arcu quis ligula mattis placerat. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-        p Praesent egestas neque eu enim. Cras dapibus. Suspendisse potenti.
-        p Phasellus accumsan cursus velit. Maecenas ullamcorper, dui et placerat feugiat, eros pede varius nisi, condimentum viverra felis nunc et lorem. Aenean vulputate eleifend tellus.
+        p Praesent egestas neque eu enim. Cras dapibus. Suspendisse potenti Phasellus accumsan cursus velit. Maecenas ullamcorper, dui et placerat feugiat, eros pede varius nisi, condimentum viverra felis nunc et lorem. Aenean vulputate eleifend tellus.
         p Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Maecenas egestas arcu quis ligula mattis placerat. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-        p Praesent egestas neque eu enim. Cras dapibus. Suspendisse potenti.
-        p Phasellus accumsan cursus velit. Maecenas ullamcorper, dui et placerat feugiat, eros pede varius nisi, condimentum viverra felis nunc et lorem. Aenean vulputate eleifend tellus.
-      .col-xs-4
+        p Praesent egestas neque eu enim. Cras dapibus. Suspendisse potenti Phasellus accumsan cursus velit.Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Maecenas egestas arcu quis ligula mattis placerat. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+          Maecenas ullamcorper, dui et placerat feugiat, eros pede varius nisi, condimentum viverra felis nunc et lorem. Aenean vulputate eleifend tellus.
+      
+      .hidden-xs.col-sm-4
         br
         =image_tag("boss2.jpg", class:'luthier-pic')
     
@@ -36,7 +36,7 @@
             p Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Maecenas egestas arcu quis ligula mattis placerat. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
             p Praesent egestas neque eu enim. Cras dapibus. Suspendisse potenti.
             =link_to "Read more", page_path('test'), 
-             class:"btn btn-primary"
+             class:"btn btn-primary btn-thumb"
       .col-sm-6.col-md-4
         .thumbnail
           =image_tag("band.jpg")
@@ -45,7 +45,7 @@
             p Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Maecenas egestas arcu quis ligula mattis placerat. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
             p Praesent egestas neque eu enim. Cras dapibus. Suspendisse potenti.
             =link_to "Read more",  page_path('test'),                         
-             class:"btn btn-primary"
+             class:"btn btn-primary btn-thumb"
              
       .col-sm-6.col-md-4
         .thumbnail
@@ -54,7 +54,16 @@
             h3 Another title
             p Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Maecenas egestas arcu quis ligula mattis placerat. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
             p Praesent egestas neque eu enim. Cras dapibus. Suspendisse potenti.
+            p Praesent egestas neque eu enim. Cras dapibus. Suspendisse potenti.
             =link_to "Read more",  page_path('test'),
-             class:"btn btn-primary"
+             class:"btn btn-primary btn-thumb"
 
 
+.footer
+  .row
+    .col-xs-4
+      p.text-center Contact me
+    .col-xs-4
+      p.text-center  Report a bug to webmaster
+    .col-xs-4
+      p.text-center  © Design Ivan Leschner & Nelly Duclos
