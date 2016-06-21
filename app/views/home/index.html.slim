@@ -2,7 +2,7 @@
   .container
     .row
       .welcome-text
-        h1 Leschner Guitar
+        h1 LESCHNER GUITAR
 
         P Luthier in Buenos Aires
         
@@ -11,7 +11,7 @@
     .company-introduction
      .row
       .col-xs-12.col-sm-8.
-        h2 About the luthier
+        h2.text-gold ABOUT THE LUTHIER
         
         p Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Maecenas egestas arcu quis ligula mattis placerat. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
         p Praesent egestas neque eu enim. Cras dapibus. Suspendisse potenti Phasellus accumsan cursus velit. Maecenas ullamcorper, dui et placerat feugiat, eros pede varius nisi, condimentum viverra felis nunc et lorem. Aenean vulputate eleifend tellus.
@@ -31,7 +31,7 @@
         .thumbnail
           =image_tag("neck&neck.jpg")
           .caption
-            h3 What I do !
+            h3.text-gold WHAT I DO !
             p Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Maecenas egestas arcu quis ligula mattis placerat. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
             p Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Maecenas egestas arcu quis ligula mattis placerat. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
             p Praesent egestas neque eu enim. Cras dapibus. Suspendisse potenti.
@@ -41,7 +41,7 @@
         .thumbnail
           =image_tag("band.jpg")
           .caption
-            h3 Musician playing on Leschner guitars!
+            h3.text-gold MUSICIANS USING LESCHNER GEARS !
             p Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Maecenas egestas arcu quis ligula mattis placerat. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
             p Praesent egestas neque eu enim. Cras dapibus. Suspendisse potenti.
             =link_to "Read more",  page_path('test'),                         
@@ -51,19 +51,11 @@
         .thumbnail
           =image_tag("body.jpg")
           .caption
-            h3 Another title
+            h3.text-gold ANOTHER TITLE
             p Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Maecenas egestas arcu quis ligula mattis placerat. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
             p Praesent egestas neque eu enim. Cras dapibus. Suspendisse potenti.
             p Praesent egestas neque eu enim. Cras dapibus. Suspendisse potenti.
             =link_to "Read more",  page_path('test'),
              class:"btn btn-primary btn-thumb"
 
-
-.footer
-  .row
-    .col-xs-4
-      p.text-center Contact me
-    .col-xs-4
-      p.text-center  Report a bug to webmaster
-    .col-xs-4
-      p.text-center  © Design Ivan Leschner & Nelly Duclos
+= render partial:"layouts/footer"

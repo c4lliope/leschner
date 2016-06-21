@@ -1,0 +1,28 @@
+.footer
+  .container
+    .row.footer-content
+        .col-xs-4.col-sm-4.col-md-4.col-lg-4.text-center
+          = link_to new_contact_path(@contact) do
+            i.fa.fa-bug.fa-fw.text-inverse
+            small.footer-text
+              span<> Report a bug or typos
+
+        .col-xs-4.col-sm-4.col-md-4.col-lg-4.text-center
+          = link_to new_contact_path(@contact) do
+            i.fa.fa-envelope-o.fa-fw.hub.text-inverse
+            small.footer-text
+              span<> Contact the luthier
+              
+        .col-xs-4.col-sm-4.col-md-4.col-lg-4.text-center
+          small.footer-text
+            |© 
+            span<>
+            = Date.today.year 
+            span<> Nelly Duclos
+            .row
+              .col-xs-12
+              - start_time =  "2016-06-20 17:30:00 "
+              - end_time   =  Time.now
+              - date = distance_of_time_in_words(start_time, end_time).to_s
+              small.footer-text Last update #{date} ago
+          
