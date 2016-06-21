@@ -4,6 +4,10 @@ Rails.application.configure do
   # Code is not reloaded between requests.
   config.cache_classes = true
 
+
+  config.serve_static_files = true
+
+
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
   # and those relying on copy on write to perform better.
@@ -27,7 +31,7 @@ Rails.application.configure do
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
   # config.assets.css_compressor = :sass
-  config.serve_static_assets = true 
+
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = true
 
@@ -76,4 +80,22 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  config.action_mailer.default_url_options = { host: 'https://vast-dawn-98907.herokuapp.com' }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.default :charset => "utf-8"
+
+  ActionMailer::Base.smtp_settings = {
+    address:               "smtp.gmail.com",
+    port:                  587,
+    user_name:             ENV["EMAIL"],
+    password:              ENV["PASSWORD"],
+    authentication:        "plain",
+    domain:                "heroku.com",
+    enable_starttls_auto:  true
+
+}
+  end
 end

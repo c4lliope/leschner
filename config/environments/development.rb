@@ -38,4 +38,10 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  #Added per active admin install instructions
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+
+#These settings are for the sending out email for active admin and consequently the   devise mailer
 end
