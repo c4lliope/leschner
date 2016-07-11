@@ -13,7 +13,9 @@ html
     link href="//pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css" rel="stylesheet" type="text/css"
 
   body
-  
+  = render partial:"layouts/nav"
+
+  .wrapper
     .container
       - flash.each do |name, msg|
         - if msg.is_a?(String)

@@ -1,0 +1,19 @@
+.navbar
+  .container
+    .navbar-header
+      button.navbar-toggle[type="button" data-toggle="collapse" data-target="#navbar-ex-collapse"]
+        span.sr-only
+          | Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+    #navbar-ex-collapse.collapse.navbar-collapse
+      ul.nav.navbar-nav.navbar-right
+        li.active
+          = link_to "Home", root_path
+        li
+          =link_to "What I Do", page_path('what_i_do')
+        li
+          =link_to "Musicians & Leschner Gears", page_path('musicians')
+        li
+          =link_to "In Progress", page_path('work_in_progress')
