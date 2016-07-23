@@ -7,7 +7,6 @@ class AdminContactsController < ApplicationController
     @admin_contact = AdminContact.new(params[:admin_contact])
     @admin_contact.request = request
     if @admin_contact.deliver
-      flash.now[:error] = nil
       flash.now[:notice]
     else
       flash.now[:error] = 'Cannot send message.'
