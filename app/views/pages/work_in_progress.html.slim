@@ -1,1 +1,25 @@
-h1 Work in progress
+.container
+  .section
+    .col-xs-12
+      h3 Work in progress
+      p.realitations Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    br
+    .col-xs-12
+      #diaporama.carousel.slide
+        .carousel-inner
+          .item.active
+            =image_tag("guitars/guitar-12.jpg")
+    
+
+              
+          a.left.carousel-control data-slide="prev" href="#diaporama" 
+            span.glyphicon.glyphicon-chevron-left
+          a.right.carousel-control data-slide="next" href="#diaporama" 
+            span.glyphicon.glyphicon-chevron-right
+      br
+        #miniatures
+          .row
+            .col-xs-2
+              img-responsive alt="" data-slide-to="0" data-target="#diaporama" 
+                =image_tag("guitars/guitar-12.jpg", class: "mini")
+
