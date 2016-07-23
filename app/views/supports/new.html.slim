@@ -1,0 +1,24 @@
+.contact-form
+  .row
+    .col-xs-offset-1.col-xs-10.col-sm-offset-2.col-sm-4
+      h1.text-center.text-gold.contact-title Contact Webmaster
+    .hidden-xs.col-sm-4
+  
+    
+  .row
+    .col-xs-offset-1.col-xs-10.col-sm-offset-2.col-sm-8
+      = simple_form_for @support, html: {class: 'form-horizontal' } do |f|
+        = f.input :name, placeholder: "Please enter your full name" ,required: true
+        br
+        = f.input :email, placeholder: "Please enter a valid email then I can reply" ,required: true
+        br
+        = f.input :message, as: :text, placeholder: "Any questions ? ",required: true, input_html: {:rows => 8}
+
+        .hidden
+          = f.input :nickname, :hint => 'Leave this field blank!'
+      
+        br
+        .form-actions
+          = f.button :submit, 'Send message', class:"btn btn-gold"
+
+        br
