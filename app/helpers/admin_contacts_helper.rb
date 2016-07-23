@@ -1,2 +1,2 @@
-# module AdminContactsHelper
-# end
+module AdminContactsHelper
+end
