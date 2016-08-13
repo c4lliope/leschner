@@ -8,7 +8,7 @@ gem 'slim', '~> 3.0', '>= 3.0.7'
 gem 'mail_form', '~> 1.5', '>= 1.5.1'
 gem 'simple_form', '~> 3.2', '>= 3.2.1'
 
-
+gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 # Use SCSS for stylesheets
