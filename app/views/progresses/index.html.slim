@@ -10,11 +10,12 @@
     - @progresses.each do |progress|
       h3 = progress.title
       h3 = progress.date
-      =image_tag("guitars/guitar-12.jpg", class: "mini")
+    
+      =image_tag progress.images[0].thumb
       br
       
       p = simple_format(progress.content)
-      = link_to "Open", progress_path(progress),
+      = link_to "Open",progresses_path(@progress),
         class:"btn btn-primary btn-thumb"
       hr
       

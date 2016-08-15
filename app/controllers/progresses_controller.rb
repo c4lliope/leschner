@@ -17,7 +17,7 @@ class ProgressesController < ApplicationController
   end
 
   def create
-    @progress = Progress.new(progress_params)
+    # @progress = Progress.new(progress_params)
 
     respond_to do |format|
       if @progress.save
@@ -39,12 +39,13 @@ class ProgressesController < ApplicationController
     end
   end
 
-  private
+  # private
 
   # Use strong_parameters for attribute whitelisting
   # Be sure to update your create() and update() controller methods.
 
-  def progress_params
-    params.require(:progress).permit(:title, :date, :content)
-  end
+  # def progress_params
+  #   params.require(:progress).permit(:title, :date, :content, { images: [] } )
+  # end
+
 end

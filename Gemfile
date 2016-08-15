@@ -8,12 +8,14 @@ gem 'slim', '~> 3.0', '>= 3.0.7'
 gem 'mail_form', '~> 1.5', '>= 1.5.1'
 gem 'simple_form', '~> 3.2', '>= 3.2.1'
 
-#administration system  
+#administration system
 gem "administrate", "~> 0.2.2"
 gem 'bourbon'
 gem 'neat'
 
 gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
+gem "mini_magick"
+gem 'postgres_ext'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 # Use SCSS for stylesheets

@@ -1,19 +1,21 @@
 module Admin
   class ProgressesController < Admin::ApplicationController
-    # To customize the behavior of this controller,
-    # simply overwrite any of the RESTful actions. For example:
-    #
-    # def index
-    #   super
-    #   @resources = Progress.all.paginate(10, params[:page])
-    # end
+    def create
 
-    # Define a custom finder by overriding the `find_resource` method:
-    # def find_resource(param)
-    #   Progress.find_by!(slug: param)
-    # end
+     @progress = Progress.new(progress_params)
+     @progress.save!
+     @progress.images[0].url # => '/url/to/file.png'
+     @progress.images[0].current_path # => 'path/to/file.png'
+     @progress.images[0].identifier # => 'f
 
-    # See https://administrate-docs.herokuapp.com/customizing_controller_actions
-    # for more information
+     if @progress.save!
+       redirect_to admin_progresses_path, notice: "New article created!"
+     end
+    end
+
+    private
+    def progress_params
+      params.require(:progress).permit(:title, :date, :content, { images: [] } )
+    end
   end
 end

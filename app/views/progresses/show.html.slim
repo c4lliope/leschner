@@ -4,13 +4,13 @@
       h2 = @progress.date
       h3 = @progress.title
     
-      p  = @progress.content
+      p  = simple_format(@progress.content)
       br
     .col-xs-12
       #diaporama.carousel.slide
         .carousel-inner
           .item.active
-            =image_tag("guitars/guitar-12.jpg")
+            =image_tag @progress.images[0]
     
 
               
@@ -23,5 +23,5 @@
           .row
             .col-xs-2
               img-responsive alt="" data-slide-to="0" data-target="#diaporama" 
-                =image_tag("guitars/guitar-12.jpg", class: "mini")
+                =image_tag @progress.images[0], class: "mini"
 
