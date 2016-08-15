@@ -12,7 +12,8 @@
       h3 = progress.date
       =image_tag("guitars/guitar-12.jpg", class: "mini")
       br
-      p  = progress.content
+      
+      p = simple_format(progress.content)
       = link_to "Open", progress_path(progress),
         class:"btn btn-primary btn-thumb"
       hr
