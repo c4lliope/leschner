@@ -1,4 +1,6 @@
 class Progress < ActiveRecord::Base
- default_scope -> { order(created_at: :desc)}
-  mount_uploaders :images, ImageUploader
+  has_many :progress_attachments
+  accepts_nested_attributes_for :progress_attachments
 end
+
+

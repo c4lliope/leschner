@@ -1,0 +1,1 @@
+json.partial! "progress_attachments/progress_attachment", progress_attachment: @progress_attachment

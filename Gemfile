@@ -13,9 +13,7 @@ gem "administrate", "~> 0.2.2"
 gem 'bourbon'
 gem 'neat'
 
-gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
-gem "mini_magick"
-gem 'postgres_ext'
+gem 'carrierwave'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 # Use SCSS for stylesheets
@@ -40,7 +38,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 # gem 'rails_12factor', group: :production
-
+gem 'pry', '~> 0.10.4'
 group :production do
     gem 'pg'
 end

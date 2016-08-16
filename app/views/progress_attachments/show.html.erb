@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Progress:</strong>
+  <%= @progress_attachment.progress_id %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @progress_attachment.image %>
+</p>
+
+<%= link_to 'Edit', edit_progress_attachment_path(@progress_attachment) %> |
+<%= link_to 'Back', progress_attachments_path %>

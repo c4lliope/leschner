@@ -4,24 +4,29 @@
       h2 = @progress.date
       h3 = @progress.title
     
-      p  = simple_format(@progress.content)
+      p  = @progress.content
       br
     .col-xs-12
       #diaporama.carousel.slide
         .carousel-inner
-          .item.active
-            =image_tag @progress.images[0]
-    
-
+          - @progress_attachments.each_with_index do |p, index|
+            .item  class= "#{ "active" if index == 0 }"
+              = image_tag p.image_url, class: "diapo"
+      
               
           a.left.carousel-control data-slide="prev" href="#diaporama" 
             span.glyphicon.glyphicon-chevron-left
           a.right.carousel-control data-slide="next" href="#diaporama" 
             span.glyphicon.glyphicon-chevron-right
-      br
-        #miniatures
-          .row
-            .col-xs-2
-              img-responsive alt="" data-slide-to="0" data-target="#diaporama" 
-                =image_tag @progress.images[0], class: "mini"
+        br
+        br  
+      /   #miniatures
+      /     .row
+      /       .col-xs-2
+      /         img-responsive alt="" data-slide-to="0" data-target="#diaporama" 
+      /         - @progress_attachments.each do |p|
+      /           = image_tag p.image_url, class: "mini"
 
+
+            
+      

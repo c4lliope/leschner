@@ -11,11 +11,12 @@
       h3 = progress.title
       h3 = progress.date
     
-      =image_tag progress.images[0].thumb
+  
+        = image_tag progress.image_url, class: "mini"
       br
       
       p = simple_format(progress.content)
-      = link_to "Open",progresses_path(@progress),
+      = link_to "Open", progress_path(progress),
         class:"btn btn-primary btn-thumb"
       hr
       

@@ -11,10 +11,10 @@ class ProgressDashboard < Administrate::BaseDashboard
     id: Field::Number,
     title: Field::String,
     date: Field::String,
+    image: CarrierwaveField,
     content: Field::Text,
-    images: CarrierwaveField,
     created_at: Field::DateTime,
-    updated_at: Field::DateTime
+    updated_at: Field::DateTime,
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -47,7 +47,7 @@ class ProgressDashboard < Administrate::BaseDashboard
     :title,
     :date,
     :content,
-    :images
+    :image,
   ].freeze
 
   # Overwrite this method to customize how progresses are displayed

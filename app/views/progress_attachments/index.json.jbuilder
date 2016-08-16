@@ -1,0 +1,1 @@
+json.array! @progress_attachments, partial: 'progress_attachments/progress_attachment', as: :progress_attachment

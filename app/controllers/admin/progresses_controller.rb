@@ -1,21 +1,23 @@
 module Admin
   class ProgressesController < Admin::ApplicationController
     def create
+       @progress = Progress.new(progress_params)
 
-     @progress = Progress.new(progress_params)
-     @progress.save!
-     @progress.images[0].url # => '/url/to/file.png'
-     @progress.images[0].current_path # => 'path/to/file.png'
-     @progress.images[0].identifier # => 'f
-
-     if @progress.save!
-       redirect_to admin_progresses_path, notice: "New article created!"
+       respond_to do |format|
+         if @progress.save
+           params[:progress_attachments]['image'].each do |a|
+              @progress_attachment = @progress.progress_attachments.create!(:image => a)
+           end
+           format.html { redirect_to @progress, notice: 'Progress was successfully created.' }
+         else
+           format.html { render action: 'new' }
+         end
+       end
      end
-    end
 
-    private
-    def progress_params
-      params.require(:progress).permit(:title, :date, :content, { images: [] } )
-    end
+     private
+       def progress_params
+          params.require(:progress).permit(:title, :content, :date, progress_attachments_attributes: [:id, :progress_id, :image])
+       end
   end
 end
