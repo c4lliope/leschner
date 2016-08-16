@@ -10,14 +10,13 @@
     
   - @progresses.in_groups_of(3, false).each do |group|
     .row.progress_container
-      - group.each do |progress|
-        .col-sm-6.col-md-4.progress_content
-          h3 = progress.title
-          h3 = progress.date  
-          br
-             =image_tag("guitars/guitar-12.jpg", class: "mini_index")  
+    - group.each do |progress|
+      .col-sm-6.col-md-4.progress_content
+        =image_tag("guitars/guitar-12.jpg", class: "mini_index")  
+        h3 = progress.title
+        h3 = progress.date  
+        br
+        p = truncate(progress.content, length: 200)
+        = link_to "Open", progress_path(progress),
+          class:"btn btn-primary btn-thumb"
       
-          p = truncate(progress.content, length: 200)
-          = link_to "Open", progress_path(progress),
-            class:"btn btn-primary btn-thumb"
-        
