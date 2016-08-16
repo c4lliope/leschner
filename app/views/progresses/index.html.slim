@@ -1,44 +1,23 @@
 .container
   .section
-    .col-xs-12
-    h1 
-      |Work In Progress  [
-      = @progresses.count 
-      | ]
-    hr
-
-    - @progresses.each do |progress|
-      h3 = progress.title
-      h3 = progress.date
+    .row
+      .col-xs-12
+        h1 
+          |Work In Progress  [
+          = @progresses.count 
+          | ]
+        hr
     
-  
-        = image_tag progress.image_url, class: "mini"
-      br
+  - @progresses.in_groups_of(3, false).each do |group|
+    .row.progress_container
+      - group.each do |progress|
+        .col-sm-6.col-md-4.progress_content
+          h3 = progress.title
+          h3 = progress.date  
+          br
+             =image_tag("guitars/guitar-12.jpg", class: "mini_index")  
       
-      p = simple_format(progress.content)
-      = link_to "Open", progress_path(progress),
-        class:"btn btn-primary btn-thumb"
-      hr
-      
+          p = truncate(progress.content, length: 200)
+          = link_to "Open", progress_path(progress),
+            class:"btn btn-primary btn-thumb"
         
-      //////////////////// Temporaire
-
-    / p.realitations Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-  / .col-xs-12
-  /   #diaporama.carousel.slide
-  /     .carousel-inner
-  /       .item.active
-  /         =image_tag("guitars/guitar-12.jpg")
-  / 
-  /       a.left.carousel-control data-slide="prev" href="#diaporama" 
-  /         span.glyphicon.glyphicon-chevron-left
-  /       a.right.carousel-control data-slide="next" href="#diaporama" 
-  /         span.glyphicon.glyphicon-chevron-right
-  /   br
-  /     #miniatures
-  /       .row
-  /         .col-xs-2
-  /           img-responsive alt="" data-slide-to="0" data-target="#diaporama" 
-  /             =image_tag("guitars/guitar-12.jpg", class: "mini")
-  / 
