@@ -25,6 +25,9 @@
               img-responsive alt="" data-slide-to="0" data-target="#diaporama" 
               - @progress_attachments.each do |p|
                 = image_tag p.image_url, class: "mini_diapo"
+          
+          = link_to "Back", progresses_path, 
+            class:"btn btn-thumb"
 
 
             
