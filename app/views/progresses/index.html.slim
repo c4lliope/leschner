@@ -6,18 +6,19 @@
           |Work In Progress  [
           = @progresses.count 
           | ]
-        hr
+  hr
+  #progresses.transitions-enabled
+    - @progresses.each do |progress|
+      .box.panel.panel-default
+        = link_to (image_tag progress.main_image.url), progress
+        .panel-body
+          h4.text-gold = progress.title.upcase
+          h5 = progress.date
+          small = truncate(progress.content, length: 150)
+          / = link_to "Open", progress_path(progress),
+          / class:"btn btn-primary btn-thumb"
+          / 
+      
         
-    .row-eq-height
-      - @progresses.each do |progress|
-        .col-xs-12.col-sm-6.col-md-4
-          .col-xs-12.progress_content
-            =image_tag progress.main_image, class: "mini_index"
-            h3.text-gold = progress.title.upcase
-            h5 = progress.date 
-            small = progress.created_at 
-            br
-            br
-            p = truncate(progress.content, length: 150)
-            = link_to "Open", progress_path(progress),
-              class:"btn btn-primary btn-thumb"
+          / .col-xs-12.col-sm-6.col-md-4
+          /   .col-xs-12.progress_content
