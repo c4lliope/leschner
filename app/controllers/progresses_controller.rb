@@ -3,8 +3,6 @@ class ProgressesController < ApplicationController
 
   def index
     @progresses = Progress.all
-    #@progress = Progress.find(params[:id])
-    #@progress_attachments = @progress.progress_attachments.all
   end
 
   def show
@@ -19,6 +17,6 @@ class ProgressesController < ApplicationController
 
    private
      def progress_params
-        params.require(:progress).permit(:title, :content, :date, progress_attachments_attributes: [:id, :progress_id, :image])
+        params.require(:progress).permit(:title, :content, :date, :main_image, progress_attachments_attributes: [:id, :progress_id, :image])
      end
 end

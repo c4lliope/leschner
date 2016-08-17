@@ -1,2 +1,8 @@
-= f.label :images
-= f.file_field :image, multiple: true, name: "progress_attachments[image][]"
+.container
+  = f.label :Main_Image
+  = f.file_field :main_image
+  br
+  = f.label :images
+  = f.file_field :image, multiple: true, name: "progress_attachments[image][]"
+
+

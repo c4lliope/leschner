@@ -17,7 +17,7 @@ module Admin
 
      private
        def progress_params
-          params.require(:progress).permit(:title, :content, :date, progress_attachments_attributes: [:id, :progress_id, :image])
+          params.require(:progress).permit(:title, :content, :date, :main_image, progress_attachments_attributes: [:id, :progress_id, :image])
        end
   end
 end
