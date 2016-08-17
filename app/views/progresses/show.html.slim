@@ -4,7 +4,7 @@
       h2 = @progress.date
       h3 = @progress.title
     
-      p  = @progress.content
+      p  = simple_format(@progress.content)
       br
     .col-xs-12
       #diaporama.carousel.slide
