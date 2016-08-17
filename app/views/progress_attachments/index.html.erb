@@ -1,29 +1,12 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Listing Progress Attachments</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Progress</th>
-      <th>Image</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @progress_attachments.each do |progress_attachment| %>
-      <tr>
-        <td><%= progress_attachment.progress_id %></td>
-        <td><%= progress_attachment.image %></td>
-        <td><%= link_to 'Show', progress_attachment %></td>
-        <td><%= link_to 'Edit', edit_progress_attachment_path(progress_attachment) %></td>
-        <td><%= link_to 'Destroy', progress_attachment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Progress attachment', new_progress_attachment_path %>
+<% @courses.in_groups_of(3, false).each do |group| %>
+<div class="row">
+<% group.each do |course|%>
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <%= truc.machin %>
+      <%= bidule.machin %>
+    </div>
+  </div>
+  <% end %>
+</div>
+<% end %>

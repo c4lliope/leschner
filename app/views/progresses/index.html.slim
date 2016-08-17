@@ -1,22 +1,23 @@
 .container
   .section
     .row
-      .col-xs-12
+       .col-xs-12
         h1 
           |Work In Progress  [
           = @progresses.count 
           | ]
         hr
-    
-  - @progresses.in_groups_of(3, false).each do |group|
-    .row.progress_container
-    - group.each do |progress|
-      .col-sm-6.col-md-4.progress_content
-        =image_tag("guitars/guitar-12.jpg", class: "mini_index")  
-        h3 = progress.title
-        h3 = progress.date  
-        br
-        p = truncate(progress.content, length: 200)
-        = link_to "Open", progress_path(progress),
-          class:"btn btn-primary btn-thumb"
-      
+        
+    .row-eq-height
+      - @progresses.each do |progress|
+        .col-xs-12.col-sm-6.col-md-4
+          .col-xs-12.progress_content
+            =image_tag("guitars/guitar-12.jpg", class: "mini_index")  
+            h3.text-gold = progress.title.upcase
+            h5 = progress.date 
+            small = progress.created_at 
+            br
+            br
+            p = truncate(progress.content, length: 150)
+            = link_to "Open", progress_path(progress),
+              class:"btn btn-primary btn-thumb"
