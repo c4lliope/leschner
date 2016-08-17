@@ -18,14 +18,13 @@
             span.glyphicon.glyphicon-chevron-left
           a.right.carousel-control data-slide="next" href="#diaporama" 
             span.glyphicon.glyphicon-chevron-right
-        br
-        br  
-      /   #miniatures
-      /     .row
-      /       .col-xs-2
-      /         img-responsive alt="" data-slide-to="0" data-target="#diaporama" 
-      /         - @progress_attachments.each do |p|
-      /           = image_tag p.image_url, class: "mini"
+        br 
+        #miniatures
+          .row
+            .col-xs-12
+              img-responsive alt="" data-slide-to="0" data-target="#diaporama" 
+              - @progress_attachments.each do |p|
+                = image_tag p.image_url, class: "mini_diapo"
 
 
             

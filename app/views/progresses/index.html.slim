@@ -1,44 +1,23 @@
 .container
   .section
-    .col-xs-12
-    h1 
-      |Work In Progress  [
-      = @progresses.count 
-      | ]
-    hr
-
-    - @progresses.each do |progress|
-      h3 = progress.title
-      h3 = progress.date
-    
-  
-        = image_tag progress.image_url, class: "mini"
-      br
-      
-      p = simple_format(progress.content)
-      = link_to "Open", progress_path(progress),
-        class:"btn btn-primary btn-thumb"
-      hr
-      
+    .row
+       .col-xs-12
+        h1 
+          |Work In Progress  [
+          = @progresses.count 
+          | ]
+        hr
         
-      //////////////////// Temporaire
-
-    / p.realitations Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-  / .col-xs-12
-  /   #diaporama.carousel.slide
-  /     .carousel-inner
-  /       .item.active
-  /         =image_tag("guitars/guitar-12.jpg")
-  / 
-  /       a.left.carousel-control data-slide="prev" href="#diaporama" 
-  /         span.glyphicon.glyphicon-chevron-left
-  /       a.right.carousel-control data-slide="next" href="#diaporama" 
-  /         span.glyphicon.glyphicon-chevron-right
-  /   br
-  /     #miniatures
-  /       .row
-  /         .col-xs-2
-  /           img-responsive alt="" data-slide-to="0" data-target="#diaporama" 
-  /             =image_tag("guitars/guitar-12.jpg", class: "mini")
-  / 
+    .row-eq-height
+      - @progresses.each do |progress|
+        .col-xs-12.col-sm-6.col-md-4
+          .col-xs-12.progress_content
+            =image_tag("guitars/guitar-12.jpg", class: "mini_index")  
+            h3.text-gold = progress.title.upcase
+            h5 = progress.date 
+            small = progress.created_at 
+            br
+            br
+            p = truncate(progress.content, length: 150)
+            = link_to "Open", progress_path(progress),
+              class:"btn btn-primary btn-thumb"

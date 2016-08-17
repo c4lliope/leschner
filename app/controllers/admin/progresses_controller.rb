@@ -8,7 +8,7 @@ module Admin
            params[:progress_attachments]['image'].each do |a|
               @progress_attachment = @progress.progress_attachments.create!(:image => a)
            end
-           format.html { redirect_to @progress, notice: 'Progress was successfully created.' }
+           format.html { redirect_to admin_progresses_path, notice: 'Progress was successfully created.' }
          else
            format.html { render action: 'new' }
          end

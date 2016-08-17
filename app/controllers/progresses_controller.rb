@@ -4,7 +4,7 @@ class ProgressesController < ApplicationController
   def index
     @progresses = Progress.all
     #@progress = Progress.find(params[:id])
-    @progress_attachments = @progress.progress_attachments.all
+    #@progress_attachments = @progress.progress_attachments.all
   end
 
   def show
