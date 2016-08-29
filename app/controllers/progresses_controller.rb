@@ -3,6 +3,7 @@ class ProgressesController < ApplicationController
 
   def index
     @progresses = Progress.all
+    @progresses.reload!
   end
 
   def show
