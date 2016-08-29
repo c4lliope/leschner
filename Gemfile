@@ -17,6 +17,7 @@ gem 'masonry-rails', '~> 0.2.4'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 # Use SCSS for stylesheets
