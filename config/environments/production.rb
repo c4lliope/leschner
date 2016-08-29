@@ -1,6 +1,6 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-config.action_controller.asset_host = "https://s3-us-west-1.amazonaws.com/leschnerguitars"
+  config.action_controller.asset_host = "https://s3-us-west-1.amazonaws.com/leschnerguitars"
   # Code is not reloaded between requests.
   config.cache_classes = true
 
@@ -30,7 +30,7 @@ config.action_controller.asset_host = "https://s3-us-west-1.amazonaws.com/leschn
   config.serve_static_files = true
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = true
-
+ 
   # Asset digests allow you to set far-future HTTP expiration dates on all assets,
   # yet still be able to expire them through the digest params.
   config.assets.digest = true
