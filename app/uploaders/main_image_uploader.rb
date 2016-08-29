@@ -1,4 +1,4 @@
-
+# encoding: utf-8
 class MainImageUploader < CarrierWave::Uploader::Base
 
   include CarrierWave::MiniMagick
