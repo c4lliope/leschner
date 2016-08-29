@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby "2.3.0"
+
 gem 'high_voltage', '~> 3.0.0'
 gem 'slim', '~> 3.0', '>= 3.0.7'
 gem 'mail_form', '~> 1.5', '>= 1.5.1'
@@ -11,8 +11,6 @@ gem 'neat'
 gem 'masonry-rails', '~> 0.2.4'
 gem 'carrierwave'
 gem 'mini_magick'
-gem "fog-aws"
-gem "fog"
 gem 'rails', '4.2.5'
 gem "twitter-bootstrap-rails"
 gem 'bootstrap-sass', '~> 3.3.6'
