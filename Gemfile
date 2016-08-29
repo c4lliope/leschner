@@ -12,6 +12,7 @@ gem 'masonry-rails', '~> 0.2.4'
 gem 'carrierwave'
 gem 'carrierwave-aws'
 gem 'mini_magick'
+gem 'fog', require: 'fog/aws'
 gem 'rails', '4.2.5'
 gem "twitter-bootstrap-rails"
 gem 'bootstrap-sass', '~> 3.3.6'
