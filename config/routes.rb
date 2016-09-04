@@ -2,10 +2,10 @@ Rails.application.routes.draw do
 
 
 
-  resources :progress_attachments
+
   namespace :admin do
     resources :progresses
-
+    resources :progress_attachments
     root to: "progresses#index"
   end
 

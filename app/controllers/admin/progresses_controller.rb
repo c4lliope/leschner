@@ -5,7 +5,7 @@ module Admin
 
        respond_to do |format|
          if @progress.save
-           params[:progress_attachments]['image'].each do |a|
+           progress_params[:progress_attachments]['image'].each do |a|
               @progress_attachment = @progress.progress_attachments.create!(:image => a)
            end
            format.html { redirect_to admin_progresses_path, notice: 'Progress was successfully created.' }
