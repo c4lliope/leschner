@@ -25,13 +25,14 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-gem 'pry', '~> 0.10.4'
+
 group :production do
     gem 'pg'
     gem 'rails_12factor'
 end
 
 group :development, :test do
+  gem 'pry', '~> 0.10.4'
   gem 'sqlite3',     '1.3.9'
   gem 'byebug',      '3.4.0'
   gem 'web-console', '2.0.0.beta3'
