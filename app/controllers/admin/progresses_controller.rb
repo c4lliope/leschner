@@ -15,7 +15,10 @@ module Admin
            end
            format.html { redirect_to admin_progresses_path, notice: 'Progress was successfully created.' }
          else
-           format.html { render action: 'new' }
+           format.html {
+             render action: 'new',
+             locals: { page: Administrate::Page::Form.new(dashboard, resource_class.new) }
+           }
          end
        end
      end
